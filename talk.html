@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Talk</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="talk">
+    <input type="password" id="code" placeholder="Enter passphrase" />
+    <button onclick="check()">Enter</button>
+    <div id="chat" class="hidden">
+      <p>Session started. No logs. Just talk.</p>
+    </div>
+  </div>
+  <script>
+    function check() {
+      const val = document.getElementById('code').value;
+      if (val === 'payollica') {
+        document.getElementById('chat').classList.remove('hidden');
+        document.getElementById('code').style.display = 'none';
+        document.querySelector('button').style.display = 'none';
+      } else {
+        alert('***');
+      }
+    }
+  </script>
+</body>
+</html>
